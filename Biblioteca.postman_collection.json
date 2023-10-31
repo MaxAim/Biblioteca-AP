@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "3cde3d6d-d3fa-4c63-a970-c9b069bb7446",
+		"name": "Biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19878600"
+	},
+	"item": [
+		{
+			"name": "Find All Libros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/libros/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Autores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/autores/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"autores",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Editoriales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/editoriales/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editoriales",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Libro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"alta\": false,\r\n    \"nombre\": \"placeholder_autor_2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/libros/alta/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"alta",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Autor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/autores/alta/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"autores",
+						"alta",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Editorial",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/editoriales/alta/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editoriales",
+						"alta",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Libro",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"autor\":{\r\n        \"id\": 1\r\n        },\r\n    \"id\": 2,\r\n    \"isbn\": 1234567899,\r\n    \"alta\": false,\r\n    \"titulo\": \"placeholder_titulo_2\",\r\n    \"anio\": 2000,\r\n    \"ejemplares\": 10,\r\n    \"ejemplaresPrestados\": 3,\r\n    \"ejemplaresRestantes\": 7,\r\n    \"editorial\": {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/libros/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Autor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"placeholder_autor_1\",\r\n    \"alta\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/autores/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"autores",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Editorial",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"placeholder_editorial_1\",\r\n    \"alta\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/editoriales/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editoriales",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Libro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"isbn\": 1234567890,\r\n        \"titulo\": \"placeholder_titulo_1\",\r\n        \"anio\": 2000,\r\n        \"ejemplares\": 10,\r\n        \"ejemplaresPrestados\": 3,\r\n        \"ejemplaresRestantes\": 7,\r\n        \"alta\": true,\r\n        \"autor\": {\r\n            \"id\": 1,\r\n            \"nombre\": \"placeholder_autor_1\",\r\n            \"alta\": true\r\n        },\r\n        \"editorial\": {\r\n            \"id\": 1,\r\n            \"nombre\": \"placeholder_editorial_1\",\r\n            \"alta\": true\r\n        }\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/libros/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Autor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"placeholder_autor_1\",\r\n    \"alta\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/autores/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"autores",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Editorial",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"placeholder_editorial_1\",\r\n    \"alta\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/editoriales/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editoriales",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Libro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/libros/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Autor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/autor/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"autor",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Editorial",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/editorial/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editorial",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
