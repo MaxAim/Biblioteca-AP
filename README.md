@@ -13,11 +13,11 @@ Este proyecto es una aplicación web para gestionar una biblioteca. Permite regi
 ## Requisitos
 
 - Java 17
-- Maven
+- Gradle
 
 ## Instalación
 
-1. Clonar el repositorio: `git clone https://github.com/gaston38kpo/ArgPrograma-TpFinalBiblioteca.git](https://github.com/MaxAim/Biblioteca-AP.git`
+1. Clonar el repositorio: `git clone https://github.com/MaxAim/Biblioteca-AP.git`
 2. Crear una base de datos Postgres llamada `biblioteca`
 3. Modificar el archivo `application.properties` con las credenciales de la base de datos
 4. Iniciar la aplicación
